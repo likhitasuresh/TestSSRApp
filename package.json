@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cp ./deployment-manifest.json .next",
+    "build": "next build && cp ./deployment-manifest.json .next/standalone && mv .next/standalone/server.js .next/standalone/index.js",
     "start": "next start",
     "lint": "next lint"
   },
