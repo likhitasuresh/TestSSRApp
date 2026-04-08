@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "routes": [
+    {
+      "source": "/(.*)",
+      "target": {
+        "kind": "compute",
+        "computeName": "compute"
+      },
+      "fallback": {
+        "kind": "static"
+      }
+    }
+  ],
+  "compute": {
+    "compute": {
+      "runtime": "NodeJs-22.x",
+      "directory": ".",
+      "entrypoint": "server.js"
+    }
+  },
+  "staticAssets": "public"
+}
